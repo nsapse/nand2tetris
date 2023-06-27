@@ -13,5 +13,20 @@ CHIP Add16 {
     OUT out[16];
 
     PARTS:
-   // Put you code here:
+    HalfAdder(a=a[0], b=b[0], sum=out[0], carry=CarryA);
+    FullAdder(a=a[1], b=b[1], c=CarryA, sum=out[1], carry=CarryB);  // Adder A
+    FullAdder(a=a[2], b=b[2], c=CarryB, sum=out[2], carry=CarryC);  // Adder B
+    FullAdder(a=a[3], b=b[3], c=CarryC, sum=out[3], carry=CarryD);  // Adder C
+    FullAdder(a=a[4], b=b[4], c=CarryD, sum=out[4], carry=CarryE);  // Adder D
+    FullAdder(a=a[5], b=b[5], c=CarryE, sum=out[5], carry=CarryF);  // Adder E
+    FullAdder(a=a[6], b=b[6], c=CarryF, sum=out[6], carry=CarryG);  // Adder F
+    FullAdder(a=a[7], b=b[7], c=CarryG, sum=out[7], carry=CarryH);  // Adder G
+    FullAdder(a=a[8], b=b[8], c=CarryH, sum=out[8], carry=CarryI);  // Adder H
+    FullAdder(a=a[9], b=b[9], c=CarryI, sum=out[9], carry=CarryJ);  // Adder I
+    FullAdder(a=a[10], b=b[10], c=CarryJ, sum=out[10], carry=CarryK);  // Adder J
+    FullAdder(a=a[11], b=b[11], c=CarryK, sum=out[11], carry=CarryL);  // Adder K
+    FullAdder(a=a[12], b=b[12], c=CarryL, sum=out[12], carry=CarryM);  // Adder L
+    FullAdder(a=a[13], b=b[13], c=CarryM, sum=out[13], carry=CarryN);  // Adder M
+    FullAdder(a=a[14], b=b[14], c=CarryN, sum=out[14], carry=CarryO);  // Adder N
+    FullAdder(a=a[15], b=b[15], c=CarryO, sum=out[15]);  // Adder O
 }
